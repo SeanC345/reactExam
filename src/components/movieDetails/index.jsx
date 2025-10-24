@@ -62,7 +62,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         />
         <Chip
          icon={<SavingsIcon />}
-         label={`Budget: $${(movie?.budget ?? 0).toLocaleString()}m`}
+         label={`Budget: $${(movie?.budget ?? 0).toLocaleString()}`}
          />
 
         <Chip label={`Released: ${movie.release_date}`} />
