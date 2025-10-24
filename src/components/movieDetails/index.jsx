@@ -8,7 +8,9 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
+import SavingsIcon from '@mui/icons-material/Savings';
 import MovieReviews from "../movieReviews"
+
 
 
 const root = {
@@ -58,6 +60,11 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
           icon={<StarRate />}
           label={`${movie.vote_average} (${movie.vote_count})`}
         />
+        <Chip
+         icon={<SavingsIcon />}
+         label={`Budget: $${(movie?.budget ?? 0).toLocaleString()}m`}
+         />
+
         <Chip label={`Released: ${movie.release_date}`} />
       </Paper>
 
